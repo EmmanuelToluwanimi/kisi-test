@@ -31,13 +31,15 @@
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   z-index: 20;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .modal-wrapper {
   background-color: white;
   padding: 2rem;
   border-radius: 1.5rem;
-
+  width: 400px;
 }
 
 .modal-title {
@@ -45,7 +47,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  min-width: 400px;
 }
 
 .close-btn {
@@ -65,7 +66,7 @@
   /* border-radius: 1.5rem; */
   cursor: pointer;
   background: white;
-  
+
 
 }
 
@@ -169,4 +170,10 @@
 
 .btn-wrapper {
   padding: 4rem;
+}
+
+@media (max-width: 600px) {
+  .modal-wrapper {
+    width: 90%;
+  }
 }

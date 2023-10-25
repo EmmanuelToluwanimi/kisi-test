@@ -19,23 +19,7 @@
                 </div>
               </div>
 
-              <div class="card-btn-wrapper">
-                <button class="card-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                    <g clip-path="url(#clip0_593_263)">
-                      <path
-                        d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                        fill="white" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_593_263">
-                        <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-
-              </div>
+              <CardButton />
             </div>
           </div>
         </div>
@@ -51,23 +35,7 @@
               </div>
             </div>
 
-            <div class="card-btn-wrapper">
-              <button class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <g clip-path="url(#clip0_593_263)">
-                    <path
-                      d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                      fill="white" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_593_263">
-                      <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-
-            </div>
+            <CardButton />
           </div>
         </div>
 
@@ -87,23 +55,7 @@
                   </div>
                 </div>
 
-                <div class="card-btn-wrapper">
-                  <button class="card-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                      <g clip-path="url(#clip0_593_263)">
-                        <path
-                          d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                          fill="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_593_263">
-                          <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-
-                </div>
+                <CardButton />
               </div>
             </div>
             <div v-if="imageArticle[3]" class="relative block-3-2 " @mouseover="HandleHover(3)" @mouseout="HandleHover()">
@@ -116,23 +68,7 @@
                   </div>
                 </div>
 
-                <div class="card-btn-wrapper">
-                  <button class="card-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                      <g clip-path="url(#clip0_593_263)">
-                        <path
-                          d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                          fill="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_593_263">
-                          <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-
-                </div>
+                <CardButton />
               </div>
             </div>
           </div>
@@ -147,23 +83,7 @@
                   </div>
                 </div>
 
-                <div class="card-btn-wrapper">
-                  <button class="card-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                      <g clip-path="url(#clip0_593_263)">
-                        <path
-                          d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                          fill="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_593_263">
-                          <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </button>
-
-                </div>
+                <CardButton />
               </div>
             </div>
           </div>
@@ -180,23 +100,7 @@
               </div>
             </div>
 
-            <div class="card-btn-wrapper">
-              <button class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <g clip-path="url(#clip0_593_263)">
-                    <path
-                      d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                      fill="white" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_593_263">
-                      <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-
-            </div>
+            <CardButton />
           </div>
         </div>
 
@@ -211,23 +115,7 @@
                 </div>
               </div>
 
-              <div class="card-btn-wrapper">
-                <button class="card-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                    <g clip-path="url(#clip0_593_263)">
-                      <path
-                        d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                        fill="white" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_593_263">
-                        <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-
-              </div>
+              <CardButton />
             </div>
           </div>
           <div :hidden="imageArticle.length > 7" class="block-3-5">
@@ -238,7 +126,7 @@
       </div>
 
       <div v-if="imageArticle.length > 7" class="phase-3">
-        <div v-for="(item, index) in imageArticle.slice(7)" :key="index" class="card-wrapper card"
+        <div v-for="(item, index) in imageArticle.slice(7)" :key="index" class="card"
           @mouseover="HandleHover(7 + index)" @mouseout="HandleHover()">
           <img :src="item.image" class="card-img" alt="lorem">
           <div class="card-backdrop" :class="hoveredIndex === (7 + index) ? 'hover-bg' : 'ordinary-bg'">
@@ -249,23 +137,7 @@
               </div>
             </div>
 
-            <div class="card-btn-wrapper">
-              <button class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <g clip-path="url(#clip0_593_263)">
-                    <path
-                      d="M10.0001 6.36023L8.59009 7.77023L13.1701 12.3602L8.59009 16.9502L10.0001 18.3602L16.0001 12.3602L10.0001 6.36023Z"
-                      fill="white" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_593_263">
-                      <rect width="24" height="24" fill="white" transform="translate(0 0.360229)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-
-            </div>
+            <CardButton />
           </div>
         </div>
         <div class="block-3-5">
@@ -320,7 +192,6 @@
 .relative {
   position: relative;
 }
-
 
 .general-wrapper {
   width: 100%;
@@ -435,8 +306,214 @@
 }
 
 .card {
-  width: 300px;
+  width: 25%;
+  height: 300px;
 }
+
+@media screen and (max-width: 1050px) {
+
+  .general-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem;
+    background: var(--tech-black);
+    box-sizing: border-box;
+  }
+  
+
+  .phase-1 {
+    display: flex;
+  }
+
+  .phase-1-block-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 50%;
+  }
+
+  .phase-1-block-2 {
+    width: 50%;
+  }
+
+  .phase-2 {
+    display: flex;
+    gap: 20px;
+  }
+
+  .phase-2-block-1 {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .level-1 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .level-2 {
+    display: flex;
+    justify-content: start;
+  }
+
+  .block-3-1 {
+    width: 100%;
+    height: 168px;
+  }
+
+  .block-3-2 {
+    width: 100%;
+    height: 168px;
+  }
+
+  .block-3-3 {
+    width: 100%;
+    height: 168px;
+  }
+
+  .phase-2-block-2 {
+    width: 50%;
+    height: 356px;
+  }
+
+  .phase-2-block-3 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .block-3-4 {
+    width: 100%;
+    height: 220px;
+  }
+
+  .upload-button {
+    color: white;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--connect-blue);
+    margin-top: 21px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .phase-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .relative{
+    height: auto;
+  }
+
+  .general-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: var(--tech-black);
+    box-sizing: border-box;
+  }
+
+  .phase-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phase-1-block-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .phase-1-block-2 {
+    width: 100%;
+  }
+
+  .phase-2 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .phase-2-block-1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .level-1 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .level-2 {
+    display: flex;
+    justify-content: start;
+  }
+
+  .block-3-1 {
+    width: 100%;
+  }
+
+  .block-3-2 {
+    width: 100%;
+  }
+
+  .block-3-3 {
+    width: 100%;
+  }
+
+  .phase-2-block-2 {
+    width: 100%;
+  }
+
+  .phase-2-block-3 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .block-3-4 {
+    width: 100%;
+  }
+
+  .upload-button {
+    color: white;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--connect-blue);
+    margin-top: 21px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .phase-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
 </style>
 
 <script setup lang="ts">
