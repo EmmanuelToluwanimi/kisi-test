@@ -1,8 +1,8 @@
-
+const baseUrl = process.env.NODE_ENV === 'production' ? "https://www.kisi-api.com/api/images" : `http://localhost:6600/api/images`
 
 export async function GetImagesApi():Promise<IServiceResponse> {
   try {
-    const res = await fetch("http://localhost:1234/api/images");
+    const res = await fetch(baseUrl);
     return await res.json();
   } catch (error) {
     throw error;
@@ -11,7 +11,7 @@ export async function GetImagesApi():Promise<IServiceResponse> {
 
 export async function UploadImageApi(params:FormData):Promise<IServiceResponse> {
   try {
-    const res = await fetch("http://localhost:1234/api/images", {
+    const res = await fetch(baseUrl, {
       method: "POST",
       body: params,
     });

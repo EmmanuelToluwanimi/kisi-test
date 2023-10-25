@@ -1,6 +1,6 @@
 
 
-export const PORT = 1234;
+export const PORT = process.env.PORT || 6600;
 
 export const ROUTES = {
   INDEX: "/",
