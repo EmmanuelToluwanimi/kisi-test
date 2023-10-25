@@ -1,0 +1,36 @@
+{
+  "name": "kisi-test",
+  "version": "1.0.0",
+  "description": "Kisi fullstack assessment test/challenge",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.ts",
+    "postinstall": "tsc",
+    "start": "node dist/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelToluwanimi/kisi-test.git"
+  },
+  "author": "Amusan T. Emmanuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmanuelToluwanimi/kisi-test/issues"
+  },
+  "homepage": "https://github.com/EmmanuelToluwanimi/kisi-test#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.15",
+    "@types/express": "^4.17.20",
+    "@types/multer": "^1.4.9",
+    "nodemon": "^3.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
