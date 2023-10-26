@@ -2,12 +2,15 @@
   "name": "kisi-test",
   "version": "1.0.0",
   "description": "Kisi fullstack assessment test/challenge",
-  "main": "dist/src/app.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.ts",
     "postinstall": "tsc",
-    "start": "node dist/src/app.js"
+    "start": "node dist/app.js",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.png src/**/*.jpg src/**/*.json dist/",
+    "build": "yarn clean && tsc && yarn copy-files"
   },
   "repository": {
     "type": "git",
@@ -28,10 +31,12 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "joi": "^17.11.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "rimraf": "^5.0.5"
   }
 }
