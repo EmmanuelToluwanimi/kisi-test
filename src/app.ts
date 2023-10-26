@@ -14,7 +14,6 @@ app.use(express.json());
 app.use('/assets', express.static(path.join(__dirname, 'images')));
 
 app.listen(PORT, async () => {
-  console.log(`Server is running on port ${PORT}`);
-
+  console.log(`Server is running on port ${PORT} and ${process.env.NODE_ENV}`);
   routes(app);
 });

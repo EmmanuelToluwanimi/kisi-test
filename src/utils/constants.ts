@@ -7,3 +7,5 @@ export const ROUTES = {
   HEALTHCHECK: '/api/healthcheck',
   IMAGES: '/api/images',
 }
+
+export const destination = process.env.NODE_ENV === 'production' ? "./dist/images" : "./src/images";
