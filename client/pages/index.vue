@@ -11,7 +11,7 @@
           </div>
           <div v-if="imageArticle[0]" class="block-1-0 relative" @mouseover="HandleHover(99)" @mouseout="HandleHover()">
             <img :src="imageArticle[0]?.image" loading="lazy" class="card-img" alt="lorem">
-            <div class="card-backdrop" :class="hoveredIndex === 99 ? 'hover-bg' : 'ordinary-bg'">
+            <div class="card-backdrop" :class="hoveredIndex === 99 ? GenerateRandomHover() : 'ordinary-bg'">
               <div class="card-description">
                 <div class="card-title">{{ imageArticle[0]?.title }}</div>
                 <div v-if="hoveredIndex === 99" class="card-caption">
@@ -27,7 +27,7 @@
         <div v-if="imageArticle[1]" class="phase-1-block-2 relative " @mouseover="HandleHover(1)"
           @mouseout="HandleHover()">
           <img :src="imageArticle[1]?.image" loading="lazy" class="card-img" alt="lorem">
-          <div class="card-backdrop" :class="hoveredIndex === 1 ? 'hover-bg' : 'ordinary-bg'">
+          <div class="card-backdrop" :class="hoveredIndex === 1 ? GenerateRandomHover() : 'ordinary-bg'">
             <div class="card-description">
               <div class="card-title">{{ imageArticle[1]?.title }}</div>
               <div v-if="hoveredIndex === 1" class="card-caption">
@@ -47,7 +47,7 @@
           <div class="level-1">
             <div v-if="imageArticle[2]" class="relative block-3-1 " @mouseover="HandleHover(2)" @mouseout="HandleHover()">
               <img :src="imageArticle[2]?.image" loading="lazy" class="card-img" alt="lorem">
-              <div class="card-backdrop" :class="hoveredIndex === 2 ? 'hover-bg' : 'ordinary-bg'">
+              <div class="card-backdrop" :class="hoveredIndex === 2 ? GenerateRandomHover() : 'ordinary-bg'">
                 <div class="card-description">
                   <div class="card-title">{{ imageArticle[2]?.title }}</div>
                   <div v-if="hoveredIndex === 2" class="card-caption">
@@ -60,7 +60,7 @@
             </div>
             <div v-if="imageArticle[3]" class="relative block-3-2 " @mouseover="HandleHover(3)" @mouseout="HandleHover()">
               <img :src="imageArticle[3]?.image" loading="lazy" class="card-img" alt="lorem">
-              <div class="card-backdrop" :class="hoveredIndex === 3 ? 'hover-bg' : 'ordinary-bg'">
+              <div class="card-backdrop" :class="hoveredIndex === 3 ? GenerateRandomHover() : 'ordinary-bg'">
                 <div class="card-description">
                   <div class="card-title">{{ imageArticle[3]?.title }}</div>
                   <div v-if="hoveredIndex === 3" class="card-caption">
@@ -75,7 +75,7 @@
           <div class="level-2">
             <div v-if="imageArticle[4]" class="relative block-3-3 " @mouseover="HandleHover(4)" @mouseout="HandleHover()">
               <img :src="imageArticle[4]?.image" loading="lazy" class="card-img" alt="lorem">
-              <div class="card-backdrop" :class="hoveredIndex === 4 ? 'hover-bg' : 'ordinary-bg'">
+              <div class="card-backdrop" :class="hoveredIndex === 4 ? GenerateRandomHover() : 'ordinary-bg'">
                 <div class="card-description">
                   <div class="card-title">{{ imageArticle[4]?.title }}</div>
                   <div v-if="hoveredIndex === 4" class="card-caption">
@@ -92,7 +92,7 @@
         <div v-if="imageArticle[5]" class="phase-2-block-2 relative" @mouseover="HandleHover(5)"
           @mouseout="HandleHover()">
           <img :src="imageArticle[5]?.image" loading="lazy" class="card-img" alt="lorem">
-          <div class="card-backdrop" :class="hoveredIndex === 5 ? 'hover-bg' : 'ordinary-bg'">
+          <div class="card-backdrop" :class="hoveredIndex === 5 ? GenerateRandomHover() : 'ordinary-bg'">
             <div class="card-description">
               <div class="card-title">{{ imageArticle[5]?.title }}</div>
               <div v-if="hoveredIndex === 5" class="card-caption">
@@ -107,7 +107,7 @@
         <div class="phase-2-block-3">
           <div v-if="imageArticle[6]" class="block-3-4 relative" @mouseover="HandleHover(6)" @mouseout="HandleHover()">
             <img :src="imageArticle[6]?.image" loading="lazy" class="card-img" alt="lorem">
-            <div class="card-backdrop" :class="hoveredIndex === 6 ? 'hover-bg' : 'ordinary-bg'">
+            <div class="card-backdrop" :class="hoveredIndex === 6 ? GenerateRandomHover() : 'ordinary-bg'">
               <div class="card-description">
                 <div class="card-title">{{ imageArticle[6]?.title }}</div>
                 <div v-if="hoveredIndex === 6" class="card-caption">
@@ -129,7 +129,7 @@
         <div v-for="(item, index) in imageArticle.slice(7)" :key="index" class="card"
           @mouseover="HandleHover(7 + index)" @mouseout="HandleHover()">
           <img :src="item.image" class="card-img" alt="lorem">
-          <div class="card-backdrop" :class="hoveredIndex === (7 + index) ? 'hover-bg' : 'ordinary-bg'">
+          <div class="card-backdrop" :class="hoveredIndex === (7 + index) ? GenerateRandomHover() : 'ordinary-bg'">
             <div class="card-description">
               <div class="card-title">{{ item.title }}</div>
               <div v-if="hoveredIndex === (7 + index)" class="card-caption">
@@ -531,6 +531,21 @@ const imageFile = useState<File | null>('imageFile', () => null);
 const openModal = useState<boolean>('openModal', () => false);
 const isLoading = useState<boolean>('isLoading', () => false);
 const hoveredIndex = useState<number>('hoveredIndex', () => -1);
+
+const hoverClass = [
+  "hover-bg-1",
+  "hover-bg-2",
+  "hover-bg-3",
+  "hover-bg-4",
+  "hover-bg-5",
+  "hover-bg-6",
+  "hover-bg-7",
+];
+
+function GenerateRandomHover() {
+  const randomIndex = Math.floor(Math.random() * hoverClass.length);
+  return hoverClass[randomIndex];
+}
 
 function HandleHover(params?: number) {
   if (params) {

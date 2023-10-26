@@ -128,9 +128,34 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
-.hover-bg {
+.hover-bg-1 {
   background-color: var(--connect-blue);
 }
+
+.hover-bg-2 {
+  background-color: var(--alarm-yellow);
+}
+
+.hover-bg-3 {
+  background-color: var(--approve-green);
+}
+
+.hover-bg-4 {
+  background-color: var(--kisi-brand-tech-black);
+}
+.hover-bg-5 {
+  background-color: var(--midnight-purple);
+}
+
+.hover-bg-6 {
+  background-color: var(--tint);
+}
+
+.hover-bg-7 {
+  background-color: var(--warm-gray);
+}
+
+
 
 .card-backdrop {
   position: absolute;
