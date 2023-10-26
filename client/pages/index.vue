@@ -356,7 +356,7 @@
 
   .level-2 {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .block-3-1 {
@@ -463,7 +463,7 @@
 
   .level-2 {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .block-3-1 {
