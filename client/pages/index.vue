@@ -168,7 +168,7 @@
               <input type="file" class="file-input" required multiple="false" @change="UploadFile($event)">
             </div>
             <div>
-              <button class="upload-btn" type="submit">
+              <button class="upload-btn" type="submit" :disabled="isLoading">
                 {{ isLoading ? "processing..." : "Upload" }}
               </button>
             </div>
@@ -559,6 +559,7 @@ function UploadFile(e: Event) {
 
 async function HandleUpload(e: any) {
   e.preventDefault();
+  isLoading.value = true;
 
   const formData = new FormData();
 
@@ -572,6 +573,7 @@ async function HandleUpload(e: any) {
   } catch (error) {
     console.log(error);
   }
+  isLoading.value = false;
 }
 
 function ToggleModal() {
