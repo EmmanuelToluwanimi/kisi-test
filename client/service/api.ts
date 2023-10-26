@@ -1,4 +1,4 @@
-const baseUrl = process.env.NODE_ENV === 'production' ? "https://www.kisi-api.com/api/images" : `http://localhost:6600/api/images`;
+const baseUrl = process.env.NODE_ENV === 'production' ? "https://kisi-api.onrender.com/api/images" : `http://localhost:6600/api/images`;
 
 interface IServiceResponse {
   status?: string;
