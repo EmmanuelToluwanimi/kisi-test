@@ -1,7 +1,9 @@
 <template>
   <main class="general-wrapper">
-
-    <div class="overlap">
+    <div class="fetching-text" v-show="isLoading === 1">
+      Please wait, fetching contents...
+    </div>
+    <div class="overlap" v-show="(isLoading === 0) && (imageArticle.length > 0) ">
 
       <div class="phase-1">
 
@@ -128,7 +130,7 @@
       <div v-if="imageArticle.length > 7" class="phase-3">
         <div v-for="(item, index) in imageArticle.slice(7)" :key="index" class="card"
           @mouseover="HandleHover(7 + index)" @mouseout="HandleHover()">
-          <img :src="item.image" class="card-img" alt="lorem">
+          <img :src="item.image" loading="lazy" class="card-img" alt="lorem">
           <div class="card-backdrop" :class="hoveredIndex === (7 + index) ? GenerateRandomHover() : 'ordinary-bg'">
             <div class="card-description">
               <div class="card-title">{{ item.title }}</div>
@@ -168,8 +170,8 @@
               <input type="file" class="file-input" required multiple="false" @change="UploadFile($event)">
             </div>
             <div>
-              <button class="upload-btn" type="submit" :disabled="isLoading">
-                {{ isLoading ? "processing..." : "Upload" }}
+              <button class="upload-btn" type="submit" :disabled="isLoading === 2">
+                {{ isLoading === 2 ? "processing..." : "Upload" }}
               </button>
             </div>
 
@@ -198,6 +200,14 @@
   min-height: 100vh;
   padding: 4rem;
   background: var(--tech-black);
+}
+
+.fetching-text{
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 500;
+  color: gray;
 }
 
 .overlap {
@@ -529,7 +539,7 @@ interface IResponseArticle {
 const imageArticle = useState<IResponseArticle[]>('imageArticle', () => []);
 const imageFile = useState<File | null>('imageFile', () => null);
 const openModal = useState<boolean>('openModal', () => false);
-const isLoading = useState<boolean>('isLoading', () => false);
+const isLoading = useState<number>('isLoading', () => 0);
 const hoveredIndex = useState<number>('hoveredIndex', () => -1);
 
 const hoverClass = [
@@ -556,12 +566,14 @@ function HandleHover(params?: number) {
 }
 
 async function GetImages() {
+  isLoading.value = 1;
   try {
     const res = await GetImagesApi();
     imageArticle.value = res.data;
   } catch (error) {
     console.log(error);
   }
+  isLoading.value = 0;
 }
 
 function UploadFile(e: Event) {
@@ -574,7 +586,7 @@ function UploadFile(e: Event) {
 
 async function HandleUpload(e: any) {
   e.preventDefault();
-  isLoading.value = true;
+  isLoading.value = 2;
 
   const formData = new FormData();
 
@@ -588,7 +600,7 @@ async function HandleUpload(e: any) {
   } catch (error) {
     console.log(error);
   }
-  isLoading.value = false;
+  isLoading.value = 0;
 }
 
 function ToggleModal() {
